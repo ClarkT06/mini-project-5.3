@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <title>Project Tracker</title>
+</head>
+<body>
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Project Tracker</h1>
+              <p class="lead">Current Date and Time:</p>
+              <p class="lead" id="date"></p>
+            </div>
+          </div>
+    </header>
+    <main class="main">
+    <div class="card" style="width: 18rem;">
+        <div>instructions</div>
+        <div>click the button below to open a form and provide information for the following:</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Project Name</li>
+          <li class="list-group-item">Project Type</li>
+          <li class="list-group-item">Hourly Rate</li>
+          <li class="list-group-item">Due Date</li>
+        </ul>
+        <div class="card-footer">
+          <button id="addProject">Add Project</button>
+        </div>
+      </div>
+      <div class="container p-3 mb-2 bg-info text-white">
+        <div class="row">
+          <div class="col-sm">
+            Project Name
+          </div>
+          <div class="col-sm">
+            Project Type
+          </div>
+          <div class="col-sm">
+            Hourly rate
+          </div>
+          <div class="col-sm">
+            Due Date
+          </div>
+          <div class="col-sm">
+            Days until due date
+          </div>
+          <div class="col-sm">
+            Potential Total Earnings
+          </div>
+          <div class="col-sm">
+            
+          </div>
+        </div>
+      </div>
+      </main>
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add a new project</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input>Project Name</input>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Project Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Type1</a>
+                  <a class="dropdown-item" href="#">Type2</a>
+                  <a class="dropdown-item" href="#">Type3</a>
+                </div>
+              </div>
+              <input>Hourly Rate</input>
+              <input>Due Date</input>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
